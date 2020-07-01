@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="@string/pref_title_general">
+
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:key="list_display_images_preference"
+            android:title="@string/pref_list_display_images"
+            android:defaultValue="true"
+            app:showText="true"
+            />
+
+    </android.support.v7.preference.PreferenceCategory>
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="@string/pref_title_feedback">
+
+        <Preference
+            android:key="rating_preference"
+            android:persistent="false"
+            android:title="@string/pref_rating"
+            android:summary="@string/pref_summary_rating">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://play.google.com/store/apps/details?id=com.lowbottgames.au.perth.traffic.cam"
+                />
+
+        </Preference>
+
+        <Preference
+            android:key="contact_preference"
+            android:persistent="false"
+            android:title="@string/pref_contact"
+            android:summary="@string/pref_summary_contact">
+
+            <intent
+                android:action="android.intent.action.SENDTO"
+                android:data="mailto:lowbottgames@gmail.com"
+                />
+
+        </Preference>
+
+    </android.support.v7.preference.PreferenceCategory>
+
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="@string/pref_title_about">
+
+        <Preference
+            android:key="privacy_preference"
+            android:persistent="false"
+            android:selectable="false"
+            android:enabled="false"
+            android:title="@string/pref_privacy"
+            android:summary="@string/pref_summary_privacy" />
+
+    </android.support.v7.preference.PreferenceCategory>
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="@string/pref_title_build_information">
+
+        <Preference
+            android:key="app_version_preference"
+            android:persistent="false"
+            android:selectable="false"
+            android:enabled="false"
+            android:title="@string/pref_app_version" />
+
+    </android.support.v7.preference.PreferenceCategory>
+
+</android.support.v7.preference.PreferenceScreen>
