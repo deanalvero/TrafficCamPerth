@@ -3,16 +3,17 @@ package com.lowbottgames.au.perth.traffic.cam;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.lowbottgames.au.perth.traffic.cam.domain.CamItem;
 import com.squareup.picasso.Picasso;
@@ -70,7 +71,7 @@ public class CamItemActivity extends AppCompatActivity {
                 if (swipeRefreshLayout != null) {
                     swipeRefreshLayout.setRefreshing(false);
 
-                    Picasso.with(CamItemActivity.this).invalidate(TCPHelper.getImageURLString(camId));
+                    Picasso.get().invalidate(TCPHelper.getImageURLString(camId));
                     loadImage(imageView, camId);
                 }
             }
@@ -79,7 +80,7 @@ public class CamItemActivity extends AppCompatActivity {
 
     private void loadImage(ImageView imageView, String id) {
         if (imageView != null && camId != null) {
-            Picasso.with(this)
+            Picasso.get()
                     .load(TCPHelper.getImageURLString(id))
 //                    .networkPolicy(NetworkPolicy.OFFLINE)
                     .into(imageView);
@@ -107,7 +108,7 @@ public class CamItemActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_refresh:
-                Picasso.with(CamItemActivity.this).invalidate(TCPHelper.getImageURLString(camId));
+                Picasso.get().invalidate(TCPHelper.getImageURLString(camId));
                 loadImage(imageView, camId);
                 return true;
 

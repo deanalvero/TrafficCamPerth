@@ -1,17 +1,14 @@
 package com.lowbottgames.au.perth.traffic.cam.adapter;
 
-import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.lowbottgames.au.perth.traffic.cam.R;
-import com.lowbottgames.au.perth.traffic.cam.TCPHelper;
 import com.lowbottgames.au.perth.traffic.cam.domain.CamItem;
-import com.squareup.picasso.Picasso;
 
 public class CamItemsNoImageRVAdapter extends RecyclerView.Adapter<CamItemsNoImageRVAdapter.CamItemsRVViewHolder> {
 

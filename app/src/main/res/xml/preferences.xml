@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.preference.PreferenceScreen
+<androidx.preference.PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.support.v7.preference.PreferenceCategory
+    <androidx.preference.PreferenceCategory
         android:title="@string/pref_title_general">
 
-        <android.support.v7.preference.SwitchPreferenceCompat
+        <androidx.preference.SwitchPreferenceCompat
             android:key="list_display_images_preference"
             android:title="@string/pref_list_display_images"
             android:defaultValue="true"
             app:showText="true"
             />
 
-    </android.support.v7.preference.PreferenceCategory>
+    </androidx.preference.PreferenceCategory>
 
-    <android.support.v7.preference.PreferenceCategory
+    <androidx.preference.PreferenceCategory
         android:title="@string/pref_title_feedback">
 
         <Preference
@@ -44,10 +44,10 @@
 
         </Preference>
 
-    </android.support.v7.preference.PreferenceCategory>
+    </androidx.preference.PreferenceCategory>
 
 
-    <android.support.v7.preference.PreferenceCategory
+    <androidx.preference.PreferenceCategory
         android:title="@string/pref_title_about">
 
         <Preference
@@ -58,9 +58,9 @@
             android:title="@string/pref_privacy"
             android:summary="@string/pref_summary_privacy" />
 
-    </android.support.v7.preference.PreferenceCategory>
+    </androidx.preference.PreferenceCategory>
 
-    <android.support.v7.preference.PreferenceCategory
+    <androidx.preference.PreferenceCategory
         android:title="@string/pref_title_build_information">
 
         <Preference
@@ -70,6 +70,6 @@
             android:enabled="false"
             android:title="@string/pref_app_version" />
 
-    </android.support.v7.preference.PreferenceCategory>
+    </androidx.preference.PreferenceCategory>
 
-</android.support.v7.preference.PreferenceScreen>
+</androidx.preference.PreferenceScreen>

@@ -5,16 +5,17 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.preference.PreferenceManager;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.preference.PreferenceManager;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.lowbottgames.au.perth.traffic.cam.adapter.CamItemsNoImageRVAdapter;
 import com.lowbottgames.au.perth.traffic.cam.adapter.CamItemsRVAdapter;
@@ -122,7 +123,7 @@ public class CamItemsActivity extends AppCompatActivity {
     private void invalidateImages(final PlaceItem placeItem) {
         if (placeItem != null) {
             for (CamItem camItem: placeItem.camItem) {
-                Picasso.with(this).invalidate(TCPHelper.getImageURLString(camItem.camID));
+                Picasso.get().invalidate(TCPHelper.getImageURLString(camItem.camID));
             }
         }
     }
